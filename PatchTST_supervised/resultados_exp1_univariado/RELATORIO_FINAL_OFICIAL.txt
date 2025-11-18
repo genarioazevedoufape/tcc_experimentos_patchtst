@@ -20,27 +20,27 @@ MÉTRICAS CONSOLIDADAS (10 execuções independentes):
 ------------------------------------------------------------
 Métrica         Média     ± Margem                       IC 95%
 ------------------------------------------------------------
-MSE          1.061711     0.059236  [1.002474, 1.120947]
-MAE            0.7870       0.0223  [0.7647, 0.8093]
-MAPE           2.199%       0.064%  [2.135%, 2.262%]
+MSE          1.059252     0.051261  [1.007991, 1.110513]
+MAE            0.7859       0.0193  [0.7665, 0.8052]
+MAPE           2.195%       0.055%  [2.140%, 2.251%]
 ------------------------------------------------------------
 
 DESEMPENHO:
 Melhor MAPE (seed)    : 2.091%
 Pior MAPE (seed)      : 2.317%
-Desvio padrão MAPE    : 0.076%
+Desvio padrão MAPE    : 0.072%
 
 TEMPO DE EXECUÇÃO:
-Tempo médio por run   : 8.59 minutos
-Tempo total (10 runs) : 77.3 minutos
+Tempo médio por run   : 8.54 minutos
+Tempo total (10 runs) : 85.4 minutos
 
 COMPARAÇÃO COM O BASLINE LSTM (Silva Júnior, 2024):
 ------------------------------------------------------------
-MSE LSTM (relatado)   : 5.510000
-MSE PatchTST          : 1.061711
-Redução do MSE        : 80.7% 
+MSE LSTM (relatado)   : 23.40000
+MSE PatchTST          : 1.059252
+Redução do MSE        : 95.47% 
 
 * Resultados estatisticamente robustos (10 seeds + IC95%)
 * Modelo treinado sob idênticas condições do trabalho de referência
 
-Relatório gerado em 18/11/2025 às 14:52
+Relatório gerado em 18/11/2025 às 15:00
