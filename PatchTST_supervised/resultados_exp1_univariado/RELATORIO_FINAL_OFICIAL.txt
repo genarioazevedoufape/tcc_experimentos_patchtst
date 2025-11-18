@@ -1,0 +1,46 @@
+RELATÓRIO FINAL COMPLETO - PATCHTST UNIVARIADO (SEM EXÓGENAS)
+===========================================================================
+
+CONFIGURAÇÃO DO EXPERIMENTO:
+--------------------------------------------------
+Modelo                : PatchTST (Nie et al., 2023)
+Dataset               : PRIO3_univariado.csv
+Variável alvo         : Fech_PRIO3
+Covariável(is)        : Nenhuma
+Período               : 2022-04-19 a 2023-04-17
+Janela de entrada     : 30 dias úteis
+Horizonte de previsão : 1 dia à frente
+Validação             : Walk-forward com retreinamento contínuo
+Número de execuções   : 10 (seeds 2021–2030)
+RevIN                 : Ativado
+Subtract_last         : Ativado
+Patch_len / Stride    : 16 / 8
+
+MÉTRICAS CONSOLIDADAS (10 execuções independentes):
+------------------------------------------------------------
+Métrica         Média     ± Margem                       IC 95%
+------------------------------------------------------------
+MSE          1.061711     0.059236  [1.002474, 1.120947]
+MAE            0.7870       0.0223  [0.7647, 0.8093]
+MAPE           2.199%       0.064%  [2.135%, 2.262%]
+------------------------------------------------------------
+
+DESEMPENHO:
+Melhor MAPE (seed)    : 2.091%
+Pior MAPE (seed)      : 2.317%
+Desvio padrão MAPE    : 0.076%
+
+TEMPO DE EXECUÇÃO:
+Tempo médio por run   : 8.59 minutos
+Tempo total (10 runs) : 77.3 minutos
+
+COMPARAÇÃO COM O BASLINE LSTM (Silva Júnior, 2024):
+------------------------------------------------------------
+MSE LSTM (relatado)   : 5.510000
+MSE PatchTST          : 1.061711
+Redução do MSE        : 80.7% 
+
+* Resultados estatisticamente robustos (10 seeds + IC95%)
+* Modelo treinado sob idênticas condições do trabalho de referência
+
+Relatório gerado em 18/11/2025 às 14:52
