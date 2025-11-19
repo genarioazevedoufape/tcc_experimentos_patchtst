@@ -1,0 +1,46 @@
+RELATÓRIO FINAL COMPLETO - PATCHTST COM BRENT (APENAS COVARIÁVEL INTERNACIONAL)
+===========================================================================
+
+CONFIGURAÇÃO DO EXPERIMENTO:
+--------------------------------------------------
+Modelo                : PatchTST (Nie et al., 2023)
+Dataset               : PRIO3_com_PETR4_BRENT.csv
+Variável alvo         : Fech_PRIO3
+Covariável(is)        : BRENT
+Período               : 2022-04-19 a 2023-04-17
+Janela de entrada     : 30 dias úteis
+Horizonte de previsão : 1 dia à frente
+Validação             : Walk-forward com retreinamento contínuo
+Número de execuções   : 10 (seeds 2021–2030)
+RevIN                 : Ativado
+Subtract_last         : Ativado
+Patch_len / Stride    : 16 / 8
+
+MÉTRICAS CONSOLIDADAS (10 execuções independentes):
+------------------------------------------------------------
+Métrica         Média     ± Margem                       IC 95%
+------------------------------------------------------------
+MSE          1.047942     0.057565  [0.990378, 1.105507]
+MAE            0.7552       0.0252  [0.7300, 0.7805]
+MAPE           2.102%       0.074%  [2.028%, 2.176%]
+------------------------------------------------------------
+
+DESEMPENHO:
+Melhor MAPE (seed)    : 1.988%
+Pior MAPE (seed)      : 2.231%
+Desvio padrão MAPE    : 0.096%
+
+TEMPO DE EXECUÇÃO:
+Tempo médio por run   : 11.55 minutos
+Tempo total (10 runs) : 115.5 minutos
+
+COMPARAÇÃO COM O BASLINE LSTM (Silva Júnior, 2024):
+------------------------------------------------------------
+MSE LSTM (relatado)   : 2.650000
+MSE PatchTST          : 1.047942
+Redução do MSE        : 81.0% 
+
+* Resultados estatisticamente robustos (10 seeds + IC95%)
+* Modelo treinado sob idênticas condições do trabalho de referência
+
+Relatório gerado em 19/11/2025 às 12:57

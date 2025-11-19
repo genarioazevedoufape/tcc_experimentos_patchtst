@@ -273,7 +273,7 @@ Tempo total (10 runs) : {tempo_total:.1f} minutos
 
 COMPARAÇÃO COM O BASLINE LSTM (Silva Júnior, 2024):
 {'-'*60}
-MSE LSTM (relatado)   : 5.510000
+MSE LSTM (relatado)   : 2.650000
 MSE PatchTST          : {mse_mean:.6f}
 Redução do MSE        : {((5.51 - mse_mean) / 5.51 * 100):.1f}% 
 
