@@ -1,21 +1,21 @@
 @echo off
 echo.
 echo ================================================
-echo  EXPERIMENTO 3 - SÓ BRENT COMO COVARIÁVEL
+echo  EXPERIMENTO 4 - COMPLETO (PETR4 + BRENT)
 echo ================================================
 
 python run_longExp.py ^
     --is_training 1 ^
-    --model_id Exp3_somente_BRNT ^
+    --model_id Exp1_Completo ^
     --model PatchTST ^
     --data custom ^
     --root_path ./data/custom/ ^
-    --data_path PRIO3_somente_BRNT.csv ^
+    --data_path PRIO3_com_PETR4_BRENT.csv ^
     --features M ^
     --target Fech_PRIO3 ^
     --seq_len 30 ^
     --pred_len 1 ^
-    --enc_in 2 ^
+    --enc_in 3 ^
     --patch_len 16 ^
     --stride 8 ^
     --revin 1 ^
@@ -30,13 +30,15 @@ python run_longExp.py ^
     --learning_rate 0.0005 ^
     --n_runs 10 ^
     --do_walkforward ^
-    --walkf_exog BRENT ^
-    --out_dir resultados_exp3_somente_BRNT/ ^
+    --walkf_exog BRENT,PETR4 ^
+    --out_dir resultados_exp4_completo/ ^
+    --baseline_mse 2.65 ^
+    --baseline_name "LSTM - Multivariado" ^
     --use_gpu False
 
 echo.
 echo ================================================
-echo EXPERIMENTO 3 CONCLUÍDO!
-echo Resultados em: resultados_exp3_somente_BRNT/
+echo EXPERIMENTO 4 CONCLUIDO!
+echo Resultados em: resultados_exp4_completo/
 echo ================================================
 pause

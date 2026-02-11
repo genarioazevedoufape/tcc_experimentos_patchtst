@@ -7,9 +7,8 @@ Modelo                : PatchTST (Nie et al., 2023)
 Dataset               : PRIO3_somente_PETR4.csv
 Variável alvo         : Fech_PRIO3
 Covariável(is)        : PETR4
-Período               : 2022-04-19 a 2023-04-17
 Janela de entrada     : 30 dias úteis
-Horizonte de previsão : 1 dia à frente
+Horizonte de previsão : 1 dia(s) à frente
 Validação             : Walk-forward com retreinamento contínuo
 Número de execuções   : 10 (seeds 2021–2030)
 RevIN                 : Ativado
@@ -20,27 +19,25 @@ MÉTRICAS CONSOLIDADAS (10 execuções independentes):
 ------------------------------------------------------------
 Métrica         Média     ± Margem                       IC 95%
 ------------------------------------------------------------
-MSE          0.959888     0.031294  [0.928595, 0.991182]
-MAE            0.7379       0.0120  [0.7258, 0.7499]
-MAPE           2.051%       0.033%  [2.018%, 2.084%]
+MSE          0.959267     0.027494  [0.931773, 0.986761]
+MAE            0.7362       0.0112  [0.7250, 0.7474]
+MAPE           2.047%       0.031%  [2.016%, 2.077%]
 ------------------------------------------------------------
 
 DESEMPENHO:
-Melhor MAPE (seed)    : 1.998%
-Pior MAPE (seed)      : 2.129%
+Melhor MAPE (seed)    : 1.998% (seed 2028)
+Pior MAPE (seed)      : 2.129% (seed 2024)
 Desvio padrão MAPE    : 0.043%
 
 TEMPO DE EXECUÇÃO:
-Tempo médio por run   : 11.11 minutos
-Tempo total (10 runs) : 111.1 minutos
+Tempo médio por run   : 12.37 minutos
+Tempo total           : 123.7 minutos
 
-COMPARAÇÃO COM O BASLINE LSTM (Silva Júnior, 2024):
+COMPARAÇÃO COM O BASELINE:
 ------------------------------------------------------------
-MSE LSTM (relatado)   : 2.330000
-MSE PatchTST          : 0.959888
-Redução do MSE        : 82.6% 
+Baseline              : LSTM - Multivariado
+MSE Baseline          : 2.330000
+MSE PatchTST          : 0.959267
+Variação do MSE       : 58.8%  (positivo = melhora)
 
-* Resultados estatisticamente robustos (10 seeds + IC95%)
-* Modelo treinado sob idênticas condições do trabalho de referência
-
-Relatório gerado em 18/11/2025 às 16:59
+Relatório gerado em 11/02/2026 às 12:36

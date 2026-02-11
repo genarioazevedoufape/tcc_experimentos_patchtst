@@ -1,24 +1,23 @@
 @echo off
 echo.
 echo ================================================
-echo  EXPERIMENTO 4 - COMPLETO (PETR4 + BRENT)
+echo  EXPERIMENTO 1 - UNIVARIADO (só PRIO3)
 echo ================================================
 
 python run_longExp.py ^
     --is_training 1 ^
-    --model_id Exp1_Completo ^
+    --model_id Exp1_Univariado ^
     --model PatchTST ^
     --data custom ^
     --root_path ./data/custom/ ^
-    --data_path PRIO3_com_PETR4_BRENT.csv ^
-    --features M ^
+    --data_path PRIO3_univariado.csv ^
+    --features S ^
     --target Fech_PRIO3 ^
     --seq_len 30 ^
     --pred_len 1 ^
-    --enc_in 3 ^
+    --enc_in 1 ^
     --patch_len 16 ^
     --stride 8 ^
-    --revin 1 ^
     --subtract_last 1 ^
     --decomposition 0 ^
     --kernel_size 3 ^
@@ -30,13 +29,15 @@ python run_longExp.py ^
     --learning_rate 0.0005 ^
     --n_runs 10 ^
     --do_walkforward ^
-    --walkf_exog BRENT,PETR4 ^
-    --out_dir resultados_exp4_completo/ ^
+    --walkf_exog "" ^
+    --out_dir resultados_exp1_univariado/ ^
+    --baseline_mse 23.40 ^
+    --baseline_name "LSTM - Univariado" ^
     --use_gpu False
 
 echo.
 echo ================================================
-echo EXPERIMENTO 4 CONCLUIDO!
-echo Resultados em: resultados_exp4_completo/
+echo EXPERIMENTO 1 CONCLUÍDO!
+echo Resultados em: resultados_exp1_univariado/
 echo ================================================
 pause

@@ -7,9 +7,8 @@ Modelo                : PatchTST (Nie et al., 2023)
 Dataset               : PRIO3_univariado.csv
 Variável alvo         : Fech_PRIO3
 Covariável(is)        : Nenhuma
-Período               : 2022-04-19 a 2023-04-17
 Janela de entrada     : 30 dias úteis
-Horizonte de previsão : 1 dia à frente
+Horizonte de previsão : 1 dia(s) à frente
 Validação             : Walk-forward com retreinamento contínuo
 Número de execuções   : 10 (seeds 2021–2030)
 RevIN                 : Ativado
@@ -20,27 +19,25 @@ MÉTRICAS CONSOLIDADAS (10 execuções independentes):
 ------------------------------------------------------------
 Métrica         Média     ± Margem                       IC 95%
 ------------------------------------------------------------
-MSE          1.059252     0.051261  [1.007991, 1.110513]
-MAE            0.7859       0.0193  [0.7665, 0.8052]
-MAPE           2.195%       0.055%  [2.140%, 2.251%]
+MSE          1.058389     0.045020  [1.013370, 1.103409]
+MAE            0.7858       0.0170  [0.7688, 0.8028]
+MAPE           2.194%       0.049%  [2.145%, 2.243%]
 ------------------------------------------------------------
 
 DESEMPENHO:
-Melhor MAPE (seed)    : 2.091%
-Pior MAPE (seed)      : 2.317%
-Desvio padrão MAPE    : 0.072%
+Melhor MAPE (seed)    : 2.091% (seed 2028)
+Pior MAPE (seed)      : 2.317% (seed 2023)
+Desvio padrão MAPE    : 0.068%
 
 TEMPO DE EXECUÇÃO:
-Tempo médio por run   : 8.54 minutos
-Tempo total (10 runs) : 85.4 minutos
+Tempo médio por run   : 6.83 minutos
+Tempo total           : 68.3 minutos
 
-COMPARAÇÃO COM O BASLINE LSTM (Silva Júnior, 2024):
+COMPARAÇÃO COM O BASELINE:
 ------------------------------------------------------------
-MSE LSTM (relatado)   : 23.40000
-MSE PatchTST          : 1.059252
-Redução do MSE        : 95.47% 
+Baseline              : LSTM - Univariado
+MSE Baseline          : 23.400000
+MSE PatchTST          : 1.058389
+Variação do MSE       : 95.5%  (positivo = melhora)
 
-* Resultados estatisticamente robustos (10 seeds + IC95%)
-* Modelo treinado sob idênticas condições do trabalho de referência
-
-Relatório gerado em 18/11/2025 às 15:00
+Relatório gerado em 06/02/2026 às 14:37
